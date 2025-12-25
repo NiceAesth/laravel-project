@@ -1,5 +1,11 @@
 .PHONY: serve vite dev stop
 
+migrate:
+	php artisan migrate
+
+seed:
+	php artisan migrate:fresh --seed
+
 serve:
 	php artisan serve
 
