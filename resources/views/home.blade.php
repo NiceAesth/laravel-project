@@ -63,7 +63,10 @@
                         {{ $s->title }}
                     </a>
                     <div class="text-muted small">
-                        by {{ $s->member?->name ?? 'Unknown' }}
+                        by
+                        <a href="{{ route('members.show', $s->member) }}" class="text-decoration-none">
+                            {{ $s->member->name }}
+                        </a>
                     </div>
                     <div class="small">{{ \Illuminate\Support\Str::limit($s->story, 120) }}</div>
                 </div>
